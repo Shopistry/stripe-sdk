@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 /// Form field to edit a credit card CVC code, with validation
@@ -38,11 +39,12 @@ class _CardCvcFormFieldState extends State<CardCvcFormField> {
     return Container(
       child: TextFormField(
         initialValue: widget.initialValue,
-        inputFormatters: [maskFormatter],
+        inputFormatters: [maskFormatter, WhitelistingTextInputFormatter.digitsOnly],
         onChanged: widget.onChanged,
         validator: widget.validator,
         onSaved: widget.onSaved,
         style: widget.textStyle,
+
         decoration: widget.decoration,
         keyboardType: TextInputType.text,
         textInputAction: TextInputAction.done,

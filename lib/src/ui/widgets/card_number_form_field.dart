@@ -55,7 +55,7 @@ class _CardNumberFormFieldState extends State<CardNumberFormField> {
         decoration: widget.decoration,
         style: widget.textStyle,
         keyboardType: TextInputType.number,
-        textInputAction: TextInputAction.next,
+        textInputAction: TextInputAction.done,
         onFieldSubmitted: (value) => FocusScope.of(context).nextFocus(),
       ),
     );

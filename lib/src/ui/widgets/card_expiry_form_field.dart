@@ -75,7 +75,7 @@ class _CardExpiryFormFieldState extends State<CardExpiryFormField> {
         style: widget.textStyle,
         decoration: widget.decoration,
         keyboardType: TextInputType.number,
-        textInputAction: TextInputAction.next,
+        textInputAction: TextInputAction.done,
         onFieldSubmitted: (value) => FocusScope.of(context).nextFocus(),
       ),
     );

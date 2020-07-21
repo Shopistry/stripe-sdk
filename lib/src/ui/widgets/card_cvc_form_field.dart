@@ -44,7 +44,7 @@ class _CardCvcFormFieldState extends State<CardCvcFormField> {
         onSaved: widget.onSaved,
         style: widget.textStyle,
         decoration: widget.decoration,
-        keyboardType: TextInputType.number,
+        keyboardType: TextInputType.text,
         textInputAction: TextInputAction.done,
       ),
     );
